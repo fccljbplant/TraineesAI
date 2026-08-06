@@ -10,41 +10,34 @@ TraineesAI is the modernized successor to [ExaminerAI](https://github.com/fccljb
 
 > When a new internee or trainee joins, engineers and management don't have time to train them. This platform shifts the training burden to AI — AI teaches, AI tests, AI tracks progress. The human mentor only steps in when AI flags a student needs help.
 
-## Core model
-
-```
-┌──────────────┐     ┌──────────────┐     ┌──────────────┐
-│   AI Train   │────▶│  AI Assess   │────▶│ Human Mentor │
-│              │     │              │     │              │
-│ • Daily      │     │ • Socratic   │     │ • Monitors   │
-│   lessons    │     │   tests      │     │   dashboard  │
-│ • Code       │     │ • Project    │     │ • Messages   │
-│   examples   │     │   tasks      │     │   struggling │
-│ • Visual     │     │ • Weekly     │     │   students   │
-│   diagrams   │     │   exams      │     │ • Overrides  │
-│ • Project    │     │              │     │   grades     │
-│   tasks      │     │              │     │              │
-└──────────────┘     └──────────────┘     └──────────────┘
-```
-
-**AI trains. Humans mentor. Never blur these roles.**
-
-## What's in this repo?
-
-This repo contains the **modernization plan** for transitioning ExaminerAI → TraineesAI. The actual codebase lives in the ExaminerAI repo and will be migrated in 4 phases:
+## Modernization status
 
 | Phase | What | Status |
 |---|---|---|
-| **Phase 1** | Strip the behavioral/psychological surveillance layer (~30 files, ~6,000 lines) | Planned |
-| **Phase 2** | Modernize student learning (slide-based viewer + proactive AI tutor) | Planned |
-| **Phase 3** | Simplify instructor experience (3 tabs: Today / Students / Messages) | Planned |
-| **Phase 4** | Polish + ship (strict TypeScript, clean modules, consolidated schemas) | Planned |
+| **Phase 1** | Strip behavioral/psychological surveillance layer (~2,368 lines removed) | ✅ Complete & deployed |
+| **Phase 2** | Modern training engine core (adaptive difficulty, learning signal, JSON mode, drills, TodayView) | ✅ Complete & deployed |
+| **Phase 3** | Slide viewer + proactive AI tutor | ⏳ Planned |
+| **Phase 4** | Simplify instructor experience (3 tabs) | ⏳ Planned |
+| **Phase 5** | Polish + ship (rename, consolidate, verify) | ⏳ Planned |
 
-See **[MODERNIZATION_PLAN.md](./MODERNIZATION_PLAN.md)** for the full execution plan.
+See **[MODERNIZATION_PLAN.md](./MODERNIZATION_PLAN.md)** for the full execution plan with progress tracking.
 
-## Why the rename?
+## What was removed (Phase 1)
 
-ExaminerAI was originally built with a Socratic assessment focus. As the product evolved, it accumulated a significant behavioral/psychological monitoring layer (7-dimension psych profiling, teacher behavior surveillance, counselor role, crisis flags) that contradicts the core mission. TraineesAI represents a clean return to the original vision: **AI trains, humans mentor, no surveillance.**
+- 11 Prisma models (PsychologyObs, PsychEvidence, WellbeingState, CrisisFlag, StudentAlert, etc.)
+- Counselor + Guardian roles entirely
+- 7-dimension psych profiling pipeline
+- Teacher behavior monitoring (safeguarding filter, InstructorBehaviorTab)
+- All behavioral instructions from AI prompts
+
+## What was added (Phase 2)
+
+- **Adaptive difficulty engine** — 5 levels that move with scores + explicit confidence
+- **Transparent Learning Signal** — 0-100 from academic facts only, shown to trainee
+- **JSON mode + zod** — replaces brittle text parsing, no more silent AI failures
+- **DrillCard spaced repetition** — wrong answers come back until mastered
+- **TodayView** — one screen answering "what do I do next?"
+- **Visible degraded mode** — AI failures are shown, not hidden
 
 ## Tech stack
 
