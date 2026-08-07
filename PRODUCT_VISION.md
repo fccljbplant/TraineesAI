@@ -775,3 +775,37 @@ reflections, and real resource URLs.
 19. SEO + Social Sharing (OG, Twitter, JSON-LD, sitemap) ✅
 20. In-App Notifications (bell, API, enrollment triggers) ✅
 21. Student Onboarding (5-step guide, auto-detect) ✅
+
+---
+
+## Implementation progress (updated August 2026 — Phase 9)
+
+### Phase 9: Certificate Pipeline + Earnings + Progress — ✅ COMPLETE & DEPLOYED
+
+**Certificate Issuance Pipeline:**
+- Auto-issues verified credentials when students complete all weeks with avg >= 75
+- Credential IDs like TRN-AI-2026-08-NA-87 (human-readable, unique)
+- Distinction flag for scores >= 85
+- Creates milestones automatically (course_completion, distinction)
+- Sends notification on issuance
+- Idempotent (won't create duplicates)
+- Triggered automatically on weekly test completion
+
+**Instructor Earnings Dashboard:**
+- Payment model with 80/20 revenue split (instructor/platform)
+- Monthly earnings chart (recharts bar chart)
+- Top courses by revenue
+- Recent sales list with anonymized student names
+- Instructor-scoped (only their courses' payments)
+
+**Course Progress Tracking:**
+- Week-by-week breakdown with scores
+- Completion percentage
+- Certificate eligibility indicator
+- Progress shown on course detail page + My Courses page
+
+### Total feature count: 24 product pillars
+1-21: Previous phases (all complete)
+22. Certificate Pipeline (auto-issue, idempotent, milestones) ✅
+23. Instructor Earnings Dashboard (revenue, chart, top courses) ✅
+24. Course Progress Tracking (week-by-week, eligibility) ✅
