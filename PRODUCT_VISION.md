@@ -745,3 +745,33 @@ reflections, and real resource URLs.
 1-16: Previous phases (all complete)
 17. My Courses page (enrolled + explore) ✅
 18. Paste-Your-Own-Outline AI conversion ✅
+
+---
+
+## Implementation progress (updated August 2026 — Phase 8)
+
+### Phase 8: SEO + Notifications + Onboarding — ✅ COMPLETE & DEPLOYED
+
+**SEO & Social Sharing:**
+- Open Graph + Twitter Card metadata on all public pages
+- JSON-LD Course structured data (Google rich results)
+- Dynamic sitemap.xml + robots.txt
+- Canonical URLs
+
+**In-App Notifications:**
+- Notification model + API (GET/PATCH)
+- NotificationBell in top bar (polls every 30s)
+- Triggers: enrollment confirmation (more triggers can be added)
+- Optional EMAIL_WEBHOOK_URL for real email delivery
+
+**Student Onboarding:**
+- 5-step guide (Browse → Enroll → Lesson → Test → Credential)
+- Auto-detects completion via single API round-trip
+- Dismissible, auto-hides for experienced students
+- Shown on TodayView
+
+### Total feature count: 21 product pillars
+1-18: Previous phases (all complete)
+19. SEO + Social Sharing (OG, Twitter, JSON-LD, sitemap) ✅
+20. In-App Notifications (bell, API, enrollment triggers) ✅
+21. Student Onboarding (5-step guide, auto-detect) ✅
