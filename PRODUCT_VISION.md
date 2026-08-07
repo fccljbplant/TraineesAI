@@ -440,3 +440,98 @@ DevOps Engineer Path
 ---
 
 *This document replaces the previous vision. It is focused, professional, and market-ready — designed for B2B sales, not consumer virality.*
+
+---
+
+## Marketing position (from Qwen research, accepted)
+
+**Hero line:** "Your engineers are too busy to train interns. Ours isn't."
+
+**Category strategy:** Position as "Professional Training OS" — not just courses, but verified career outcomes. Own the category: where learning meets proof.
+
+**Wedge market:** Engineering teams where the "intern training burden" is a daily pain. Senior engineers spending 10+ hours/week answering basic questions instead of shipping code.
+
+**The moat:** AI examination engine + verified certificates. No competitor has both.
+
+---
+
+## Success metrics (from Qwen research, adapted)
+
+| Metric | Industry average | Our target |
+|---|---|---|
+| Course completion rate | 15% | 60% |
+| Student engagement | Baseline | +70% (via adaptive difficulty + drills) |
+| Enrollment rate (visitor → paid) | 5-10% | 15% |
+| Repeat purchase rate | 20-30% | 40% |
+| NPS score | 30-40 | 50+ |
+| Monthly active students (month 12) | — | 10,000 |
+| Revenue (month 18) | — | $1M ARR |
+
+---
+
+## RICE prioritization (from Qwen research, adapted)
+
+| Feature | Reach | Impact | Confidence | Effort | RICE |
+|---|---|---|---|---|---|
+| Course marketplace (public catalog) | 10 | 3 | 0.9 | 5 | **5.4** |
+| Verified credentials | 10 | 3 | 0.8 | 4 | **6.0** |
+| Learning paths | 8 | 2 | 0.8 | 3 | **4.3** |
+| Employer dashboard (B2B) | 5 | 3 | 0.7 | 8 | **1.3** |
+| Professional milestones | 8 | 1 | 0.9 | 2 | **3.6** |
+| Cohort performance view | 6 | 1 | 0.8 | 2 | **2.4** |
+| AI course creation | 4 | 3 | 0.6 | 10 | **0.7** |
+| LinkedIn integration | 8 | 1 | 0.9 | 1 | **7.2** |
+| Employer verification API | 5 | 2 | 0.8 | 2 | **4.0** |
+
+**Build order (highest RICE first):**
+1. LinkedIn integration (RICE 7.2) — quick win, viral growth
+2. Verified credentials (RICE 6.0) — core value proposition
+3. Course marketplace (RICE 5.4) — front door for customers
+4. Learning paths (RICE 4.3) — increases order value
+5. Employer verification API (RICE 4.0) — B2B trust
+6. Professional milestones (RICE 3.6) — differentiation
+7. Cohort performance view (RICE 2.4) — instructor value
+8. Employer dashboard (RICE 1.3) — enterprise expansion
+9. AI course creation (RICE 0.7) — future revenue stream
+
+---
+
+## Navigation structure (from Qwen research, adapted)
+
+**Student nav (4 tabs — clean, professional):**
+1. **Dashboard** — TodayView (what do I do next?) + learning signal + due drills
+2. **My Courses** — enrolled courses with progress + course catalog (browse new)
+3. **Community** — peer code review + Q&A threads (no social feed)
+4. **Credentials** — verified credentials + skill milestones + capstone portfolio
+
+**Instructor nav (5 tabs — professional, not gamey):**
+1. **Today** — students needing attention + recent submissions
+2. **Students** — roster sorted by academic attention score
+3. **Courses** — course builder + curriculum management
+4. **Analytics** — cohort health + skill gap analysis + ROI metrics
+5. **Messages** — in-app messaging with students
+
+**Admin nav (4 tabs — institutional):**
+1. **Overview** — institution health + enrollment metrics
+2. **Users** — user management + approvals + roles
+3. **Courses** — course marketplace management + custom courses
+4. **System** — AI usage + costs + feature flags + audit logs
+
+---
+
+## What we rejected from the Qwen proposal (and why)
+
+| Qwen proposal | Why rejected |
+|---|---|
+| XP system + levels | Consumer mechanic. Professionals don't need dopamine hits to learn. |
+| Streaks with freeze protection | Creates anxiety, not learning. 3x/week for 2 hours > 10 min/day for a streak. |
+| Weekly leaderboards (competitive) | Discourages collaboration. We use skill-mastery rankings (cooperative). |
+| "Blockchain-verified" certificates | Buzzword. A DB-backed verification URL is more reliable + cheaper. |
+| Variable rewards (random XP bonuses) | Slot machine psychology. Unprofessional. |
+| Decoy pricing / anchoring | Used-car tactics. We use transparent value-based pricing. |
+| "Endowed progress" (start at 40/100 XP) | Manipulative. Professionals see through this. |
+| Community feed (Skool-style social posting) | We're a training platform, not a social network. Peer code review only. |
+
+---
+
+*This document supersedes all previous planning files. It is focused, professional, and market-ready — designed for B2B sales, not consumer virality.*
