@@ -2,44 +2,43 @@
 
 **AI-driven training platform for engineering internees.**
 
-AI teaches. AI tests. Human mentors. The training platform that takes the training burden off busy engineers and managers.
+AI trains. AI tests. Human mentors. The training platform that takes the training burden off busy engineers and managers — purpose-built for industry, not consumer entertainment.
 
 ## What is this?
 
-TraineesAI is the modernized successor to [ExaminerAI](https://github.com/fccljbplant/ExaminerAI). It's a Next.js SaaS platform designed for a specific problem in industry:
+TraineesAI is a professional training platform that solves a specific industry problem:
 
-> When a new internee or trainee joins, engineers and management don't have time to train them. This platform shifts the training burden to AI — AI teaches, AI tests, AI tracks progress. The human mentor only steps in when AI flags a student needs help.
+> When a new internee joins, engineers and managers don't have time to train them. TraineesAI shifts the training burden to AI — AI teaches, AI tests, AI tracks. The human mentor only steps in when the AI flags a student is struggling.
 
-## Modernization status — ALL PHASES COMPLETE ✅
+We are NOT a consumer app. No XP, no streaks, no leagues. We build real technical skills with verified digital credentials that employers trust.
+
+## Professional product pillars
+
+1. **Course Marketplace** — Curated professional courses with pricing tiers (Free → Self-Paced → Mentored → Cohort → Team → Enterprise)
+2. **Verified Digital Credentials** — Skill-verified certifications with embedded metadata, LinkedIn integration, employer verification API
+3. **Professional Achievement System** — Skill-verified milestones (not gamey badges), mapped to industry signals
+4. **Learning Paths** — Role-based curriculum (Frontend, Backend, DevOps, etc.) with path credentials
+5. **Employer Dashboard** — B2B dashboard with ROI tracking, skill gap analysis, compliance reports
+6. **AI Course Creation** — Companies generate custom courses for their tech stack
+
+## What we deliberately DON'T do
+
+- ❌ XP points, streaks, leagues (consumer mechanics, not professional)
+- ❌ Community feed (we're a training platform, not a social network)
+- ❌ AI-generated images (unprofessional — we use real documentation)
+- ❌ Live streaming as core (AI training is always available, scalable)
+
+## Modernization status (Phases 1-5 complete)
 
 | Phase | What | Status |
 |---|---|---|
-| **Phase 1** | Strip behavioral/psychological surveillance layer (~2,368 lines removed) | ✅ Complete & deployed |
-| **Phase 2** | Modern training engine (adaptive difficulty, learning signal, JSON mode, drills, TodayView) | ✅ Complete & deployed |
-| **Phase 3** | Slide viewer + proactive AI tutor (on-the-fly slide generation) | ✅ Complete & deployed |
-| **Phase 4** | Instructor experience (already adequate after Phase 1 cleanup) | ✅ Complete |
-| **Phase 5** | Rename to TraineesAI + final polish | ✅ Complete & deployed |
+| **Phase 1** | Strip behavioral/psychological surveillance layer | ✅ Complete |
+| **Phase 2** | Modern training engine (adaptive difficulty, learning signal, drills) | ✅ Complete |
+| **Phase 3** | Slide viewer + proactive AI tutor | ✅ Complete |
+| **Phase 4** | Instructor experience | ✅ Complete |
+| **Phase 5** | Rename to TraineesAI | ✅ Complete |
 
-See **[MODERNIZATION_PLAN.md](./MODERNIZATION_PLAN.md)** for the full execution plan.
-
-## Key features
-
-### For students (trainees)
-- **TodayView** — one screen answering "what do I do next?"
-- **SlideViewer** — on-the-fly slide generation (video, code, visual, activity, reflection)
-- **Adaptive difficulty** — questions scale 1-5 based on performance + explicit confidence
-- **DrillCard spaced repetition** — wrong answers come back until mastered
-- **AI Tutor panel** — persistent right-side chat with proactive bubbles
-- **Socratic testing** — daily tests (3 Qs) + weekly tests (10 Qs)
-- **Project-based learning** — AI-generated capstone tasks, Gantt chart
-
-### For instructors (mentors)
-- **Today tab** — students needing attention, recent submissions
-- **Students roster** — sorted by academic attention score
-- **Assignments** — group tasks + peer assessment
-- **Insights** — operational analytics
-- **Messages** — in-app messaging with students
-- **Grade overrides** — human-in-the-loop on AI-graded answers
+See **[PRODUCT_VISION.md](./PRODUCT_VISION.md)** for the full professional product vision and roadmap.
 
 ## Tech stack
 
@@ -47,4 +46,4 @@ See **[MODERNIZATION_PLAN.md](./MODERNIZATION_PLAN.md)** for the full execution 
 
 ## License
 
-Proprietary. © fccljbplant.
+Proprietary. © fccljbplant / Inzet Enterprises.
