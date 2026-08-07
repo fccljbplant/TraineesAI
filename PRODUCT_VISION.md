@@ -713,3 +713,35 @@ All features from the RICE prioritization are now complete:
   - Finance: Financial Analysis ($259)
 - 2 learning paths: Full-Stack Developer ($799), DevOps Engineer ($899)
 - Professional Unsplash thumbnails
+
+---
+
+## Implementation progress (updated August 2026 — Phase 7.3)
+
+### Phase 7.3: Paste-Your-Own-Outline AI Conversion — ✅ COMPLETE & DEPLOYED
+
+**The feature:** Users paste any course outline (Word doc, PDF, syllabus, textbook
+table of contents) into a big text box. The AI reads it and converts it into a
+TraineesAI-compatible structured outline. The converted outline is fully editable.
+
+**New API:** POST /api/courses/convert-outline — accepts raw outline text +
+course metadata, AI converts to structured JSON (weeks → days → objectives,
+activities, deliverables, reflections). 100K char limit, 30K maxTokens.
+
+**In the Course Creation Wizard:** Step 3 now has two modes:
+1. Generate with AI (from scratch)
+2. Paste Your Outline (convert existing material)
+
+**In CoursePlanner:** "Convert Outline" button lets instructors replace an
+existing course's curriculum with a pasted outline. Amber warning before
+replacing.
+
+**Key value:** Any organization with existing training material (Word docs,
+PDFs, old syllabi) can digitize it into TraineesAI in minutes — no need to
+start from scratch. The AI enhances the material with objectives, activities,
+reflections, and real resource URLs.
+
+### Total feature count: 18 product pillars
+1-16: Previous phases (all complete)
+17. My Courses page (enrolled + explore) ✅
+18. Paste-Your-Own-Outline AI conversion ✅
