@@ -10,25 +10,18 @@ TraineesAI is a professional training platform that solves a specific industry p
 
 > When a new internee joins, engineers and managers don't have time to train them. TraineesAI shifts the training burden to AI — AI teaches, AI tests, AI tracks. The human mentor only steps in when the AI flags a student is struggling.
 
-We are NOT a consumer app. No XP, no streaks, no leagues. We build real technical skills with verified digital credentials that employers trust.
-
 ## Professional product pillars
 
-1. **Course Marketplace** — Curated professional courses with pricing tiers (Free → Self-Paced → Mentored → Cohort → Team → Enterprise)
-2. **Verified Digital Credentials** — Skill-verified certifications with embedded metadata, LinkedIn integration, employer verification API
-3. **Professional Achievement System** — Skill-verified milestones (not gamey badges), mapped to industry signals
-4. **Learning Paths** — Role-based curriculum (Frontend, Backend, DevOps, etc.) with path credentials
-5. **Employer Dashboard** — B2B dashboard with ROI tracking, skill gap analysis, compliance reports
-6. **AI Course Creation** — Companies generate custom courses for their tech stack
+1. **Course Marketplace** — Public course listings with pricing tiers, filters, featured courses ✅
+2. **Learning Paths** — Role-based curriculum bundles (Frontend, Backend, DevOps) ✅
+3. **Verified Digital Credentials** — Credly-style skill verification with LinkedIn integration ✅
+4. **Employer Verification API** — Public API for employers to verify credentials ✅
+5. **Professional Achievement System** — Skill-verified milestones (not gamey badges) ✅
+6. **Marketplace Publishing** — Admin toggle to publish courses with pricing ✅
+7. **Employer Dashboard** — B2B dashboard with ROI tracking (planned)
+8. **AI Course Creation** — Custom course generation for institutions (planned)
 
-## What we deliberately DON'T do
-
-- ❌ XP points, streaks, leagues (consumer mechanics, not professional)
-- ❌ Community feed (we're a training platform, not a social network)
-- ❌ AI-generated images (unprofessional — we use real documentation)
-- ❌ Live streaming as core (AI training is always available, scalable)
-
-## Modernization status (Phases 1-5 complete)
+## Modernization status
 
 | Phase | What | Status |
 |---|---|---|
@@ -37,8 +30,16 @@ We are NOT a consumer app. No XP, no streaks, no leagues. We build real technica
 | **Phase 3** | Slide viewer + proactive AI tutor | ✅ Complete |
 | **Phase 4** | Instructor experience | ✅ Complete |
 | **Phase 5** | Rename to TraineesAI | ✅ Complete |
+| **Phase 6** | Course marketplace + verified credentials + learning paths | ✅ Complete |
 
 See **[PRODUCT_VISION.md](./PRODUCT_VISION.md)** for the full professional product vision and roadmap.
+
+## Live URLs
+
+- **App:** https://examiner-ai-tau.vercel.app/
+- **Course Marketplace:** https://examiner-ai-tau.vercel.app/courses
+- **Credential Verification:** https://examiner-ai-tau.vercel.app/verify/[credentialId]
+- **Employer API:** https://examiner-ai-tau.vercel.app/api/verify/credential?credentialId=...
 
 ## Tech stack
 

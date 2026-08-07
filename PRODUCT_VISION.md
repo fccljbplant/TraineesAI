@@ -535,3 +535,35 @@ DevOps Engineer Path
 ---
 
 *This document supersedes all previous planning files. It is focused, professional, and market-ready — designed for B2B sales, not consumer virality.*
+
+---
+
+## Implementation progress (updated August 2026)
+
+### Phase 6: Course Marketplace + Verified Credentials — ✅ COMPLETE & DEPLOYED
+
+**Built:**
+- Course marketplace: public `/courses` listing page + `/courses/[id]` detail page
+- Learning paths: `LearningPath` + `LearningPathCourse` models, public `/paths/[id]` page
+- Verified digital credentials: `Certificate` model with unique credentialId, public `/verify/[credentialId]` page, LinkedIn "Add to Profile" integration
+- Professional milestones: `Milestone` model (7 types: course_completion, distinction, capstone_certified, skill_mastery, consistent_performer, peer_recognized, mentor_endorsed)
+- Employer verification API: `GET /api/verify/credential?credentialId=...` (public, rate-limited)
+- Student credentials dashboard: `CredentialsView` component with certificates, skill mastery, milestones
+- Marketplace publish toggle in CoursePlanner: admin can set price, category, published, featured, instructorName, durationWeeks
+
+**New Prisma models:** LearningPath, LearningPathCourse, Certificate (extended), Milestone
+**New public routes:** /courses, /courses/[id], /paths/[id], /verify/[credentialId], /api/marketplace/courses, /api/marketplace/paths, /api/verify/credential
+**New auth routes:** /api/student/credentials
+
+**RICE scores achieved:**
+- LinkedIn integration (RICE 7.2) ✅ — built into verify page
+- Verified credentials (RICE 6.0) ✅ — Certificate model + verify page
+- Course marketplace (RICE 5.4) ✅ — /courses + /courses/[id]
+- Learning paths (RICE 4.3) ✅ — LearningPath model + /paths/[id]
+- Employer verification API (RICE 4.0) ✅ — /api/verify/credential
+- Professional milestones (RICE 3.6) ✅ — Milestone model + CredentialsView
+
+### Next priorities (by RICE):
+- Cohort performance view (RICE 2.4) — instructor analytics
+- Employer dashboard (RICE 1.3) — B2B dashboard with ROI tracking
+- AI course creation (RICE 0.7) — custom course generation for institutions
