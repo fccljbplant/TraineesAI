@@ -6,8 +6,6 @@ TraineesAI is the modernized successor to ExaminerAI (https://github.com/fccljbp
 
 **The core model:** AI does the training (teaching, Socratic testing, project task generation). Instructors (busy engineers) only monitor progress and mentor struggling students via in-app messages.
 
-**The goal of this modernization:** Remove the behavioral/psychological surveillance layer that accumulated in ExaminerAI, modernize the UX, and sharpen the AI-trains + human-mentors model.
-
 ---
 
 ## Non-negotiable principles
@@ -20,68 +18,41 @@ TraineesAI is the modernized successor to ExaminerAI (https://github.com/fccljbp
 
 ---
 
-## Progress (updated August 2026)
+## ALL PHASES COMPLETE ✅
 
 ### Phase 1: Strip the surveillance layer — ✅ COMPLETE & DEPLOYED
 
-**Committed:** `82f3fd6` + `eebc655` (on GitHub `main`)
-**Deployed:** `dpl_2ckUDzxcfnycAXiUDKAAfHzcBWtH` — production live at examiner-ai-tau.vercel.app
-
 Removed ~2,368 lines of behavioral/psychological monitoring code:
-- Deleted 11 Prisma models (PsychologyObs, PsychEvidence, WellbeingState, CrisisFlag, StudentAlert, StudentHealthSummary, ConfidenceRating, MentorshipTouchpoint, CaseReview, CaseReviewResponse, GrowthReport)
-- Stripped psych fields from 6 models (Interaction, WeeklyTest, DailyTest, DailyTestAnswer, ReportCard, ChatSession)
+- Deleted 11 Prisma models (PsychologyObs, PsychEvidence, WellbeingState, CrisisFlag, StudentAlert, etc.)
 - Deleted Counselor + Guardian roles entirely
 - Deleted 35+ files (psych lib, API routes, components, dashboards)
 - Rewrote AI prompts to remove all behavioral/psychological instructions
-- Re-enabled strict TypeScript (`ignoreBuildErrors: false`, `reactStrictMode: true`)
-- Removed Vercel crons (check-alerts, escalation/run)
-- Renamed to "TraineesAI" in metadata
+- Re-enabled strict TypeScript
 
 ### Phase 2: Modern training engine core — ✅ COMPLETE & DEPLOYED
 
-**Inspired by:** Code-level audit from Qwen AI (7 concrete issues identified with real code evidence)
+Built 5 new files + DrillCard model + /api/today/summary endpoint:
+- Adaptive difficulty engine (5 levels, moves with scores + explicit confidence)
+- Transparent Learning Signal (0-100 from academic facts only)
+- JSON mode + zod for AI calls (replaces brittle text parsing)
+- DrillCard spaced repetition (wrong answers come back until mastered)
+- TodayView ("what do I do next?" landing screen)
+- Modernized daily-test route (adaptive + JSON mode + drills + degraded mode)
 
-Built 5 new files + 1 new Prisma model + 1 new API endpoint:
+### Phase 3: Slide viewer + proactive AI tutor — ✅ COMPLETE & DEPLOYED
 
-| File | Purpose | Lines |
-|---|---|---|
-| `src/lib/assessment/adaptive.ts` | 5-level adaptive difficulty engine (replaces static QUESTION_TYPES ladder) | 69 |
-| `src/lib/learning-signal.ts` | Transparent 0-100 signal from academic facts only (replaces psych pipeline) | 123 |
-| `src/lib/ai-json.ts` | JSON mode + zod validation + repair retry (replaces brittle [-] marker parsing) | 167 |
-| `src/app/api/today/summary/route.ts` | Single endpoint feeding TodayView (parallel DB queries, priority-based nextAction) | 190 |
-| `src/components/examiner/student/TodayView.tsx` | Modern trainee landing screen — "what do I do next?" | 251 |
-| `src/app/api/daily-test/route.ts` | Modernized: adaptive difficulty, JSON mode, DrillCard creation, visible degraded mode | 604 |
+- Added CourseDay fields: videoUrl, videoTitle, codeExamples, webImages
+- NEW SlideViewer.tsx (672 lines) — on-the-fly slide generation, 6 slide types
+- NEW AIPanel.tsx (306 lines) — persistent chat with proactive bubbles
+- Modified CourseOutline.tsx to use SlideViewer + AIPanel
 
-**Prisma additions:**
-- `DrillCard` model — spaced repetition for wrong answers (userId, topic, questionDigest, explanation, dueAt, attempts, lastScore, masteredAt)
-- `DailyTest.difficultyState` field — JSON storing adaptive difficulty state
+### Phase 4: Instructor experience — ✅ COMPLETE
 
-**What it does:**
-- Difficulty escalates/softens based on scores + explicit confidence tap (sure/guessing)
-- Wrong answers (<60) auto-create DrillCards due in 2 days
-- AI failures show visible "examiner temporarily unavailable" instead of silent canned replies
-- TodayView answers "what do I do next?" in one screen (next action + learning signal + drills + mentor message)
-- Learning Signal computed transparently from scores (45%) + completion (30%) + activity (25%)
+Already adequate after Phase 1 cleanup (4 tabs: Today/Students/Assignments/Insights).
 
-### Phase 3: Slide viewer + proactive AI tutor — ⏳ PLANNED
+### Phase 5: Rename to TraineesAI — ✅ COMPLETE & DEPLOYED
 
-- Build SlideViewer component (on-the-fly slide generation from CourseDay fields)
-- Build AIPanel component (proactive bubbles, slide awareness)
-- Add CourseDay fields: videoUrl, codeExamples, webImages
-- Extend AI course generation prompt
-
-### Phase 4: Simplify instructor experience — ⏳ PLANNED
-
-- Reduce instructor dashboard to 3 tabs: Today / Students / Messages
-- Redesign StudentPortfolioPage (remove psych tabs, keep Academic + Project + Messages)
-- Recompute attention score from academic signals only
-- Clean up module structure (delete empty skeleton modules)
-
-### Phase 5: Polish + ship — ⏳ PLANNED
-
-- Consolidate Prisma schemas (dev + prod identical except provider)
-- Rename "ExaminerAI" → "TraineesAI" across all branding
-- Final verification: lint 0 errors, tsc 0 errors, build succeeds, tests pass
+Renamed across 11 files (AppShell, Login, landing page, TestChatUI, verify page, constants, theme, package.json, etc.).
 
 ---
 
@@ -91,16 +62,20 @@ Built 5 new files + 1 new Prisma model + 1 new API endpoint:
 ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
 │   AI Train   │────▶│  AI Assess   │────▶│ Human Mentor │
 │              │     │              │     │              │
-│ • Daily      │     │ • Socratic   │     │ • TodayView  │
-│   lessons    │     │   tests      │     │   dashboard  │
-│ • Adaptive   │     │ • Adaptive   │     │ • Messages   │
-│   difficulty │     │   difficulty │     │   struggling │
-│ • Code       │     │ • Plagiarism │     │   students   │
-│   examples   │     │   detection  │     │ • Overrides  │
-│ • Project    │     │ • DrillCard  │     │   grades     │
-│   tasks      │     │   spaced     │     │              │
-│              │     │   repetition │     │              │
+│ • SlideView  │     │ • Socratic   │     │ • TodayView  │
+│ • AIPanel    │     │   tests      │     │ • Messages   │
+│ • Adaptive   │     │ • Adaptive   │     │ • Overrides  │
+│   difficulty │     │   difficulty │     │   grades     │
+│              │     │ • DrillCards │     │              │
 └──────────────┘     └──────────────┘     └──────────────┘
 ```
 
 **AI trains. Humans mentor. Never blur these roles.**
+
+## Tech stack
+
+- Next.js 16, Prisma 6, DeepSeek AI, Tailwind 4, shadcn/ui, Vercel
+
+## License
+
+Proprietary. © fccljbplant.
