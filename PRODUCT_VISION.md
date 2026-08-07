@@ -686,3 +686,30 @@ All features from the RICE prioritization are now complete:
 14. Category Pages (browse by professional domain) ✅
 15. Instructor Profiles (public, showcase courses) ✅
 16. B2C Checkout (free + paid enrollment flow) ✅
+
+---
+
+## Implementation progress (updated August 2026 — Phase 7.2)
+
+### Phase 7.2: My Courses + Course Creation Wizard + Marketplace Seed — ✅ COMPLETE
+
+**My Courses Page:**
+- Students see enrolled courses with progress + explore new courses
+- Added "My Courses" tab to student navigation
+- TodayView links to My Courses
+
+**Course Creation Wizard:**
+- 3-step dialog: Course Details → Marketplace Settings → AI Curriculum Generation
+- Creates marketplace-ready courses with published=true
+- Thumbnail picker, price, category, skills, prerequisites all settable
+- Added to CoursePlanner as "Create New Course (Wizard)"
+
+**Marketplace Seed Data:**
+- 8 demo courses across 5 categories:
+  - Technology: Web Dev & AI ($299), DevOps ($349), Git (Free)
+  - Data: Python for Data Engineering ($249), SQL Fundamentals (Free)
+  - Compliance: Workplace Safety ($199)
+  - Business: Project Management ($229)
+  - Finance: Financial Analysis ($259)
+- 2 learning paths: Full-Stack Developer ($799), DevOps Engineer ($899)
+- Professional Unsplash thumbnails
