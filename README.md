@@ -1,25 +1,27 @@
 # TraineesAI
 
-**AI-driven training platform for engineering internees.**
+**AI-driven training platform for professional internees.**
 
-AI trains. AI tests. Human mentors. The training platform that takes the training burden off busy engineers and managers — purpose-built for industry, not consumer entertainment.
+AI trains. AI tests. Human mentors. The training platform that takes the training burden off busy engineers and managers — purpose-built for ANY professional domain, not just IT.
 
 ## What is this?
 
 TraineesAI is a professional training platform that solves a specific industry problem:
 
-> When a new internee joins, engineers and managers don't have time to train them. TraineesAI shifts the training burden to AI — AI teaches, AI tests, AI tracks. The human mentor only steps in when the AI flags a student is struggling.
+> When a new internee or trainee joins, engineers and managers don't have time to train them. TraineesAI shifts the training burden to AI — AI teaches, AI tests, AI tracks. The human mentor only steps in when the AI flags a student is struggling.
+
+**Not IT-specific.** Works for: Technology, Engineering, Business, Finance, Healthcare, Manufacturing, HR, Compliance, Professional Skills, and more.
 
 ## Professional product pillars
 
-1. **Course Marketplace** — Public course listings with pricing tiers, filters, featured courses ✅
-2. **Learning Paths** — Role-based curriculum bundles (Frontend, Backend, DevOps) ✅
+1. **Course Marketplace** — Public course listings with pricing, filters, direct enrollment ✅
+2. **Learning Paths** — Role-based curriculum bundles ✅
 3. **Verified Digital Credentials** — Credly-style skill verification with LinkedIn integration ✅
 4. **Employer Verification API** — Public API for employers to verify credentials ✅
-5. **Professional Achievement System** — Skill-verified milestones (not gamey badges) ✅
-6. **Marketplace Publishing** — Admin toggle to publish courses with pricing ✅
-7. **Employer Dashboard** — B2B dashboard with ROI tracking (planned)
-8. **AI Course Creation** — Custom course generation for institutions (planned)
+5. **Professional Achievement System** — Skill-verified milestones ✅
+6. **Course Management Panel** — Admin dashboard with publish/feature toggles, enrollment stats ✅
+7. **Direct Enrollment** — Students self-enroll from the marketplace ✅
+8. **Featured Courses on Landing** — Marketing-ready landing page with course previews ✅
 
 ## Modernization status
 
@@ -30,7 +32,7 @@ TraineesAI is a professional training platform that solves a specific industry p
 | **Phase 3** | Slide viewer + proactive AI tutor | ✅ Complete |
 | **Phase 4** | Instructor experience | ✅ Complete |
 | **Phase 5** | Rename to TraineesAI | ✅ Complete |
-| **Phase 6** | Course marketplace + verified credentials + learning paths | ✅ Complete |
+| **Phase 6** | Course marketplace + credentials + learning paths + enrollment + management | ✅ Complete |
 
 See **[PRODUCT_VISION.md](./PRODUCT_VISION.md)** for the full professional product vision and roadmap.
 

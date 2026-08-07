@@ -567,3 +567,37 @@ DevOps Engineer Path
 - Cohort performance view (RICE 2.4) — instructor analytics
 - Employer dashboard (RICE 1.3) — B2B dashboard with ROI tracking
 - AI course creation (RICE 0.7) — custom course generation for institutions
+
+---
+
+## Implementation progress (updated August 2026 — Phase 6.3)
+
+### Phase 6.3: Direct Enrollment + Landing Page + Course Management — ✅ COMPLETE
+
+**Direct Enrollment:**
+- Students can self-enroll from the marketplace (POST /api/marketplace/enroll)
+- EnrollButton on course detail page adapts to auth state
+- Atomic enrollment + counter increment
+
+**Featured Courses on Landing Page:**
+- Login page now has 2-column layout: login form + featured courses preview
+- FeaturedCourses component fetches published+featured courses
+- "Browse All Courses" CTA links to /courses
+
+**Course Management Panel (admin):**
+- Replaced old courses panel with CourseManagementPanel (427 lines)
+- Stats: total courses, published count, enrollments, avg rating
+- Inline publish/feature toggles
+- Search + category filter
+- Edit (→ CoursePlanner) + View (→ marketplace) actions
+
+**Domain-Agnostic Categories (NOT IT-specific):**
+- 10 professional domains: Technology, Engineering, Business, Finance,
+  Healthcare, Manufacturing, HR, Compliance, Professional Skills, Other
+- The platform works for ANY professional training, not just IT
+
+### Note on RICE
+RICE (Reach × Impact × Confidence ÷ Effort) is a universal product
+management prioritization framework — it is NOT IT-specific. It works
+for any product in any industry. It's simply a scoring system for
+"which feature gives the most value for the least effort."
