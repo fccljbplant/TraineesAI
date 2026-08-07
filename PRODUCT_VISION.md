@@ -809,3 +809,23 @@ reflections, and real resource URLs.
 22. Certificate Pipeline (auto-issue, idempotent, milestones) ✅
 23. Instructor Earnings Dashboard (revenue, chart, top courses) ✅
 24. Course Progress Tracking (week-by-week, eligibility) ✅
+
+---
+
+## Phase 11: Admin Analytics + Course Preview + Payments — ✅ COMPLETE
+
+**Admin Platform Analytics:** Business dashboard with user stats, revenue charts,
+engagement metrics, top courses, recent activity feed. First tab in AdminDashboard.
+
+**Course Preview:** Students can preview the first lesson (Day 1) before enrolling.
+Public API, collapsible card on course detail page with video/code/topics preview.
+
+**Payment Recording:** Paid enrollments now create Payment records (80/20 split),
+update instructor earnings, send payment confirmation notifications, show receipt
+in checkout flow.
+
+### Total: 31 product pillars complete
+25-28: Previous (wishlist, recommendations, sharing, celebration)
+29. Admin Platform Analytics (revenue, users, engagement) ✅
+30. Course Preview (free first lesson) ✅
+31. Payment Recording (80/20 split, receipt, audit) ✅
