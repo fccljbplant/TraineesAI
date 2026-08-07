@@ -601,3 +601,39 @@ RICE (Reach × Impact × Confidence ÷ Effort) is a universal product
 management prioritization framework — it is NOT IT-specific. It works
 for any product in any industry. It's simply a scoring system for
 "which feature gives the most value for the least effort."
+
+---
+
+## Implementation progress (updated August 2026 — Phase 6.4)
+
+### Phase 6.4: Cohort Analytics + Employer Dashboard + Mentor Briefings — ✅ COMPLETE
+
+**Cohort Analytics (instructor):**
+- /api/instructor/cohort-analytics — academic-only performance data
+- CohortAnalyticsView: stats cards, weekly progress chart, topic difficulty
+  chart, top performers, at-risk students
+- Added "Analytics" tab to InstructorDashboard
+
+**Employer Dashboard (B2B):**
+- /api/employer/dashboard — ROI tracking, trainee progress, skill gaps
+- EmployerDashboard: ROI cards, trainee table with status badges,
+  skill gap analysis with recommended courses
+- Added "Employer" nav item for coordinator + admin roles
+
+**AI Mentor Briefings:**
+- /api/instructor/student-briefing — 3-sentence heuristic briefing
+  (no AI calls — fast + free). Generated from academic signals only.
+- StudentBriefing component at top of student portfolio
+- Suggested talking points based on weak topics / project status
+
+**RICE scores achieved (9 of 9):**
+All features from the RICE prioritization are now complete:
+- LinkedIn integration (RICE 7.2) ✅
+- Verified credentials (RICE 6.0) ✅
+- Course marketplace (RICE 5.4) ✅
+- Learning paths (RICE 4.3) ✅
+- Employer verification API (RICE 4.0) ✅
+- Professional milestones (RICE 3.6) ✅
+- Cohort performance view (RICE 2.4) ✅
+- Employer dashboard (RICE 1.3) ✅
+- AI mentor briefings (bonus) ✅
