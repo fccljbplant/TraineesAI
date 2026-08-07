@@ -637,3 +637,52 @@ All features from the RICE prioritization are now complete:
 - Cohort performance view (RICE 2.4) ✅
 - Employer dashboard (RICE 1.3) ✅
 - AI mentor briefings (bonus) ✅
+
+---
+
+## Implementation progress (updated August 2026 — Phase 7)
+
+### Phase 7: B2C Storefront — ✅ COMPLETE & DEPLOYED
+
+**Course Thumbnail System:**
+- Unsplash free image search (no API key needed) — 12 professional stock photos per search
+- File upload (base64, <500KB) for custom thumbnails
+- External AI generator links (Craiyon, Canva) for custom designs
+- Integrated into CoursePlanner admin UI
+
+**Course Reviews & Ratings:**
+- Students who complete a course can leave 1-5 star reviews
+- Helpful upvote system (one per user per review)
+- Reviews displayed on course detail page with star ratings
+- Auto-updates course average rating + review count
+
+**Category Pages:**
+- /courses/category/[category] — browse courses by professional domain
+- Category chips on main marketplace page with live course counts
+- 10 professional categories (Technology, Engineering, Business, Finance, Healthcare, Manufacturing, HR, Compliance, Professional Skills, Other)
+
+**Instructor Profiles:**
+- /instructors/[instructorName] — public instructor profile page
+- Shows bio, course count, total enrollments, avg rating, course list
+- /api/marketplace/instructors — public API for instructor directory
+
+**B2C Checkout Flow:**
+- Free courses: "Enroll Free" (direct enrollment)
+- Paid courses: "Enroll for $X" opens checkout dialog with:
+  - Course name, price, what's included (AI tutor + certificate)
+  - "Proceed to Payment" (placeholder — Stripe integration is next step)
+  - Post-enrollment: "Enrolled! Continue Learning →"
+
+**B2C Business Model:**
+- Any business can create courses, set prices, and sell to the general public
+- Students browse the marketplace, enroll (free or paid), learn via AI, earn verified credentials
+- Instructors earn revenue from course sales
+- Platform takes a percentage (marketplace fee model)
+
+### Total feature count: 16 product pillars
+1-11: Previous phases (all complete)
+12. Course Thumbnails (Unsplash + upload + AI generator links) ✅
+13. Course Reviews & Ratings (stars + helpful votes) ✅
+14. Category Pages (browse by professional domain) ✅
+15. Instructor Profiles (public, showcase courses) ✅
+16. B2C Checkout (free + paid enrollment flow) ✅
